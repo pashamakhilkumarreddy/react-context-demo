@@ -35,16 +35,22 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons">
-                <Link to="/login" className="button is-info">
-                  <strong>Login</strong>
-                </Link>
-                <Link to="/register" className="button is-info is-light">
-                  Register
-                </Link>
+            <NavLink to="/pokemons" className="navbar-item">
+              <strong>Pokemons</strong>
+            </NavLink>
+            {false ? (
+              <div className="navbar-item">
+                <div className="buttons">
+                  <Link to="/login" className="button is-info">
+                    <strong>Login</strong>
+                  </Link>
+                  <Link to="/register" className="button is-info is-light">
+                    Register
+                  </Link>
+                  <button className="button is-danger is-light">Log out</button>
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
       </nav>

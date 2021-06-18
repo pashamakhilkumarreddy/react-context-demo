@@ -27,8 +27,8 @@ export default class ErrorBoundary extends Component {
 const ErrorPage = memo(() => {
   return (
     <div className="columns is-centered is-vcentered is-mobile">
-      <div className="column is-12-mobile">
-        <h2 className="title is-1">
+      <div className="column is-12-mobile has-text-centered">
+        <h2 className="title is-1 ">
           Oops! Looks like it is something from our side
         </h2>
       </div>

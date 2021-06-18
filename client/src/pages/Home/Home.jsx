@@ -1,12 +1,21 @@
 import { memo } from "react";
+import PokemonList from "./PokemonList";
+import PokemonProvider from "../../context/PokemonContext";
+import Head from "../../components/Head";
+import CapturedPokemons from "./CapturedPokemons";
+import AddPokemon from "./AddPokemon";
 
 const Home = () => {
   return (
-    <div className="columns is-centered is-vcentered is-mobile">
-      <div className="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-        <h1 className="title is-1">Home</h1>
-      </div>
-    </div>
+    <>
+      <Head title="Home" />
+      <PokemonProvider>
+        <AddPokemon />
+        <PokemonList />
+        <hr />
+        <CapturedPokemons />
+      </PokemonProvider>
+    </>
   );
 };
 
